@@ -10,6 +10,7 @@
 		F36281DB204E8B1000D308BD /* DateAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = F36281D8204E8B1000D308BD /* DateAlert.png */; };
 		F36281DC204E8B1000D308BD /* TimeAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = F36281D9204E8B1000D308BD /* TimeAlert.png */; };
 		F36281DD204E8B1000D308BD /* LocationAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = F36281DA204E8B1000D308BD /* LocationAlert.png */; };
+		F36281DF204E8DE200D308BD /* UserNotiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36281DE204E8DE200D308BD /* UserNotiService.swift */; };
 		F3DAC151204DA9EA00394FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC150204DA9EA00394FD0 /* AppDelegate.swift */; };
 		F3DAC153204DA9EA00394FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC152204DA9EA00394FD0 /* ViewController.swift */; };
 		F3DAC156204DA9EA00394FD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC154204DA9EA00394FD0 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		F36281D8204E8B1000D308BD /* DateAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DateAlert.png; sourceTree = "<group>"; };
 		F36281D9204E8B1000D308BD /* TimeAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeAlert.png; sourceTree = "<group>"; };
 		F36281DA204E8B1000D308BD /* LocationAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationAlert.png; sourceTree = "<group>"; };
+		F36281DE204E8DE200D308BD /* UserNotiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotiService.swift; sourceTree = "<group>"; };
 		F3DAC14D204DA9EA00394FD0 /* Local_noti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Local_noti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC150204DA9EA00394FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3DAC152204DA9EA00394FD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		F3DAC162204DAA0700394FD0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F36281DE204E8DE200D308BD /* UserNotiService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			files = (
 				F3DAC167204DAB6600394FD0 /* ShadowView.swift in Sources */,
 				F3DAC153204DA9EA00394FD0 /* ViewController.swift in Sources */,
+				F36281DF204E8DE200D308BD /* UserNotiService.swift in Sources */,
 				F3DAC151204DA9EA00394FD0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
