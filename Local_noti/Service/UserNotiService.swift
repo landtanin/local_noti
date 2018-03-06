@@ -46,6 +46,46 @@ class UserNotiService: NSObject {
         
     }
     
+    // MARK: Timer trigger
+    /**
+     The parameter type, TimeInteval, is just a sub-type of Double. We can legally use Double here as well
+     But TimeInterval just makes it looks cleaner
+     */
+    func timerRequest(with interval: TimeInterval) {
+        
+        // 1/3 compenent, content
+        let content = UNMutableNotificationContent()
+        content.title = "Timer Finished"
+        content.body = "Your timer is all done. YAY"
+        
+        // 2/3 compenent, trigger
+        // in order to have it repeats, the interval has to be at least 60 seconds
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
+        
+        // 3/3 compenent, request
+        let request = UNNotificationRequest(identifier: "userNotification.timer",
+                                            content: content,
+                                            trigger: trigger)
+    
+        unCenter.add(request) { (error) in
+            // extra logic after it's added
+            print("request added")
+        }
+        
+    }
+    
+    // MARK: Date trigger
+    func dateRequest(with interval: DateComponents) {
+        
+    }
+    
+    
+    // MARK: Location trigger
+    func locationRequest() {
+        
+    }
+    
+    
 }
 
 extension UserNotiService: UNUserNotificationCenterDelegate {

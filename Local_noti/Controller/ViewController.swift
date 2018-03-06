@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBAction func onTimeTapped(){
         
         print("timer")
+        UserNotiService.shared.timerRequest(with: 5)
         
     }
     
