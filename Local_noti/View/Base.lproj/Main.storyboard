@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Local_noti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGt-mo-YtK" customClass="ShadowView" customModule="Local_noti" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="193.5" width="300" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eRI-Uz-Mok">
+                                        <rect key="frame" x="40" y="40" width="220" height="220"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kud-Ak-G8d">
+                                                <rect key="frame" x="60" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="DG9-X9-JTA"/>
+                                                    <constraint firstAttribute="height" constant="100" id="Kwz-1h-ZSS"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="timerIcon"/>
+                                                <connections>
+                                                    <action selector="onTimeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z1o-P5-L7x"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nWg-7z-hHS">
+                                                <rect key="frame" x="0.0" y="120" width="220" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITP-7Y-Mqu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="iJe-XV-3RX"/>
+                                                            <constraint firstAttribute="width" constant="100" id="kcR-1D-omc"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="dateIcon"/>
+                                                        <connections>
+                                                            <action selector="onDateTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebs-lC-6Qq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OI-f6-Wu7">
+                                                        <rect key="frame" x="120" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="G9o-C8-uvw"/>
+                                                            <constraint firstAttribute="height" constant="100" id="SwH-CH-ARm"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="locationIcon"/>
+                                                        <connections>
+                                                            <action selector="onLocationTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="vg6-xU-C6z"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="4CG-6M-7t6"/>
+                                    <constraint firstItem="eRI-Uz-Mok" firstAttribute="centerX" secondItem="oGt-mo-YtK" secondAttribute="centerX" id="Dcs-9K-8cd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="MdQ-gO-ybL"/>
+                                    <constraint firstItem="eRI-Uz-Mok" firstAttribute="centerY" secondItem="oGt-mo-YtK" secondAttribute="centerY" id="SoA-50-Fie"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="oQT-Sd-4o0"/>
+                                    <constraint firstAttribute="width" constant="300" id="y6Q-6X-Hr8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83062287410000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oGt-mo-YtK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CEc-Dc-fd9"/>
+                            <constraint firstItem="oGt-mo-YtK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="laa-Sr-vDg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dateIcon" width="100" height="100"/>
+        <image name="locationIcon" width="100" height="100"/>
+        <image name="timerIcon" width="100" height="100"/>
+    </resources>
+</document>
