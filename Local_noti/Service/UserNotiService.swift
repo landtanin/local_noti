@@ -77,7 +77,20 @@ class UserNotiService: NSObject {
     }
     
     // MARK: Date trigger
-    func dateRequest(with interval: DateComponents) {
+    func dateRequest(with components: DateComponents) {
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Date Trigger"
+        content.body = "It is now the future!"
+        content.sound = .default()
+        content.badge = 1
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+        let request = UNNotificationRequest(identifier: "userNotification.date",
+                                            content: content,
+                                            trigger: trigger)
+        
+        unCenter.add(request)
         
     }
     

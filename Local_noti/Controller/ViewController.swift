@@ -21,16 +21,32 @@ class ViewController: UIViewController {
     @IBAction func onTimeTapped(){
         
         print("timer")
-        UserNotiService.shared.timerRequest(with: 5)
+        AlertService.actionSheet(in: self, title: "5 seconds") { 
+            UserNotiService.shared.timerRequest(with: 5)
+        }
+        
+    }
+    
+    @IBAction func onDateTapped(){
+        print("date")
+        
+        var components = DateComponents()
+        // Looking for everytime the time hit the specific second in a minute
+        components.second = 0
+        // Looking for everytime the time hit the Wednesday in a week
+//        components.weekday = 4
+        
+        AlertService.actionSheet(in: self, title: "Some future time") {
+            UserNotiService.shared.dateRequest(with: components)
+        }
         
     }
     
     @IBAction func onLocationTapped(){
         print("location")
-    }
-    
-    @IBAction func onDateTapped(){
-        print("date")
+        AlertService.actionSheet(in: self, title: "When I return") {
+            
+        }
     }
 
 
