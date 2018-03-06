@@ -57,6 +57,8 @@ class UserNotiService: NSObject {
         let content = UNMutableNotificationContent()
         content.title = "Timer Finished"
         content.body = "Your timer is all done. YAY"
+        content.sound = .default()
+        content.badge = 1
         
         // 2/3 compenent, trigger
         // in order to have it repeats, the interval has to be at least 60 seconds
