@@ -12,6 +12,7 @@
 		F36281DD204E8B1000D308BD /* LocationAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = F36281DA204E8B1000D308BD /* LocationAlert.png */; };
 		F36281DF204E8DE200D308BD /* UserNotiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36281DE204E8DE200D308BD /* UserNotiService.swift */; };
 		F36281E1204E9EBA00D308BD /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36281E0204E9EBA00D308BD /* AlertService.swift */; };
+		F36281E3204EA2B900D308BD /* CoreLocService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36281E2204EA2B900D308BD /* CoreLocService.swift */; };
 		F3DAC151204DA9EA00394FD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC150204DA9EA00394FD0 /* AppDelegate.swift */; };
 		F3DAC153204DA9EA00394FD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DAC152204DA9EA00394FD0 /* ViewController.swift */; };
 		F3DAC156204DA9EA00394FD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DAC154204DA9EA00394FD0 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		F36281DA204E8B1000D308BD /* LocationAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationAlert.png; sourceTree = "<group>"; };
 		F36281DE204E8DE200D308BD /* UserNotiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotiService.swift; sourceTree = "<group>"; };
 		F36281E0204E9EBA00D308BD /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		F36281E2204EA2B900D308BD /* CoreLocService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocService.swift; sourceTree = "<group>"; };
 		F3DAC14D204DA9EA00394FD0 /* Local_noti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Local_noti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DAC150204DA9EA00394FD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3DAC152204DA9EA00394FD0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				F36281DE204E8DE200D308BD /* UserNotiService.swift */,
 				F36281E0204E9EBA00D308BD /* AlertService.swift */,
+				F36281E2204EA2B900D308BD /* CoreLocService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3DAC167204DAB6600394FD0 /* ShadowView.swift in Sources */,
+				F36281E3204EA2B900D308BD /* CoreLocService.swift in Sources */,
 				F3DAC153204DA9EA00394FD0 /* ViewController.swift in Sources */,
 				F36281DF204E8DE200D308BD /* UserNotiService.swift in Sources */,
 				F3DAC151204DA9EA00394FD0 /* AppDelegate.swift in Sources */,

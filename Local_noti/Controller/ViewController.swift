@@ -14,7 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        UserNotiService.shared.authorize()
+        UserNotiService.instance.authorize()
+        CoreLocService.instance.authorize()
+        
+        // set an observer for internal notification
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didEnterRetion),
+                                               name: NSNotification.Name("internalNotification.enteredRegion"),
+                                               object: nil)
         
     }
 
@@ -22,7 +29,7 @@ class ViewController: UIViewController {
         
         print("timer")
         AlertService.actionSheet(in: self, title: "5 seconds") { 
-            UserNotiService.shared.timerRequest(with: 5)
+            UserNotiService.instance.timerRequest(with: 5)
         }
         
     }
@@ -37,7 +44,7 @@ class ViewController: UIViewController {
 //        components.weekday = 4
         
         AlertService.actionSheet(in: self, title: "Some future time") {
-            UserNotiService.shared.dateRequest(with: components)
+            UserNotiService.instance.dateRequest(with: components)
         }
         
     }
@@ -45,10 +52,14 @@ class ViewController: UIViewController {
     @IBAction func onLocationTapped(){
         print("location")
         AlertService.actionSheet(in: self, title: "When I return") {
-            
+            CoreLocService.instance.updateLocation()
         }
     }
 
-
+    // handle the internal notification posting when user enter the region
+    @objc func didEnterRetion() {
+        UserNotiService.instance.locationRequest()
+    }
+    
 }
 

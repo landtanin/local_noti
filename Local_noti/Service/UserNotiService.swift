@@ -16,7 +16,7 @@ class UserNotiService: NSObject {
     
     // singleton, private constructor
     private override init() {}
-    static let shared = UserNotiService()
+    static let instance = UserNotiService()
     
     let unCenter = UNUserNotificationCenter.current()
     
@@ -85,7 +85,7 @@ class UserNotiService: NSObject {
         content.sound = .default()
         content.badge = 1
         
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let request = UNNotificationRequest(identifier: "userNotification.date",
                                             content: content,
                                             trigger: trigger)
@@ -93,13 +93,28 @@ class UserNotiService: NSObject {
         unCenter.add(request)
         
     }
-    
+
     
     // MARK: Location trigger
     func locationRequest() {
         
+        let content = UNMutableNotificationContent()
+        content.title = "You have returned"
+        content.body = "Welcome back"
+        content.sound = .default()
+        content.badge = 1
+        
+        // this one is not accurate and the reason why we need to use internal notification posting, observing instead
+        // to get triggered when the users enter the region
+//        UNLocationNotificationTrigger
+        
+        let request = UNNotificationRequest(identifier: "userNotification.location",
+                                            content: content,
+                                            trigger: nil)
+        
+        unCenter.add(request)
+        
     }
-    
     
 }
 
