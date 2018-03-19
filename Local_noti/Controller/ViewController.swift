@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         UserNotiService.instance.authorize()
         CoreLocService.instance.authorize()
         
-        // set an observer for internal notification
+        // set an observer when the user return to the first region for internal notification
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(didEnterRetion),
                                                name: NSNotification.Name("internalNotification.enteredRegion"),
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         }
     }
 
-    // handle the internal notification posting when user enter the region
+    // trigger the location when users return to the first region
     @objc func didEnterRetion() {
         UserNotiService.instance.locationRequest()
     }

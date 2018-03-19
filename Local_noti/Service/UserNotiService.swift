@@ -46,6 +46,35 @@ class UserNotiService: NSObject {
         
     }
     
+    // return an optional as we may or may not get the content attachment
+    func getAttachment(for id: NotificationAttachmentId) -> UNNotificationAttachment? {
+        
+        var imageName: String
+        
+        switch id {
+        case .timer:
+                imageName = "TimeAlert"
+        case .date:
+                imageName = "DateAlert"
+        case .location:
+                imageName = "LocationAlert"
+        }
+        
+        // get path to image assets
+        guard let url = Bundle.main.url(forResource: imageName, withExtension: "png") else {
+            return nil
+        }
+        
+        // create attachment
+        do {
+            let attachment = try UNNotificationAttachment(identifier: id.rawValue, url: url)
+            return attachment
+        } catch {
+            return nil
+        }
+        
+    }
+    
     // MARK: Timer trigger
     /**
      The parameter type, TimeInteval, is just a sub-type of Double. We can legally use Double here as well
@@ -60,6 +89,11 @@ class UserNotiService: NSObject {
         content.sound = .default()
         content.badge = 1
         
+        // add the attachment
+        if let attachment = getAttachment(for: .timer) {
+            content.attachments = [attachment]
+        }
+        
         // 2/3 compenent, trigger
         // in order to have it repeats, the interval has to be at least 60 seconds
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
@@ -68,7 +102,7 @@ class UserNotiService: NSObject {
         let request = UNNotificationRequest(identifier: "userNotification.timer",
                                             content: content,
                                             trigger: trigger)
-    
+        
         unCenter.add(request) { (error) in
             // extra logic after it's added
             print("request added")
@@ -85,6 +119,12 @@ class UserNotiService: NSObject {
         content.sound = .default()
         content.badge = 1
         
+        // add the attachment
+        if let attachment = getAttachment(for: .date) {
+            content.attachments = [attachment]
+        }
+        
+        
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         let request = UNNotificationRequest(identifier: "userNotification.date",
                                             content: content,
@@ -93,7 +133,7 @@ class UserNotiService: NSObject {
         unCenter.add(request)
         
     }
-
+    
     
     // MARK: Location trigger
     func locationRequest() {
@@ -104,9 +144,14 @@ class UserNotiService: NSObject {
         content.sound = .default()
         content.badge = 1
         
+        // add the attachment
+        if let attachment = getAttachment(for: .location) {
+            content.attachments = [attachment]
+        }
+        
         // this one is not accurate and the reason why we need to use internal notification posting, observing instead
         // to get triggered when the users enter the region
-//        UNLocationNotificationTrigger
+        //        UNLocationNotificationTrigger
         
         let request = UNNotificationRequest(identifier: "userNotification.location",
                                             content: content,
@@ -131,6 +176,10 @@ extension UserNotiService: UNUserNotificationCenterDelegate {
         print("UN WILL present")
         
         let options: UNNotificationPresentationOptions = [.alert, .sound]
+        
+        //        completionHandler(options)
         completionHandler(options)
+        
     }
+    
 }

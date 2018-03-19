@@ -50,6 +50,7 @@ extension CoreLocService: CLLocationManagerDelegate {
         
     }
     
+    // once we've started monitoring location region
     // we want to get notify when user enter the region
     // here, instead of using user notification like the time and date case, we're gonna use the internal notification centre instead
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
@@ -59,7 +60,7 @@ extension CoreLocService: CLLocationManagerDelegate {
         NotificationCenter.default.post(name: NSNotification.Name("internalNotification.enteredRegion"), object: nil)
         
     }
-    
+    // then, we gonna need an observer which do something when the user return to the first region (this is done in ViewController.viewDidLoad())
     
     
 }

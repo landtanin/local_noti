@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F33617DB205FCA88009FC36E /* NotificationAttachmentId.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33617DA205FCA88009FC36E /* NotificationAttachmentId.swift */; };
 		F36281DB204E8B1000D308BD /* DateAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = F36281D8204E8B1000D308BD /* DateAlert.png */; };
 		F36281DC204E8B1000D308BD /* TimeAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = F36281D9204E8B1000D308BD /* TimeAlert.png */; };
 		F36281DD204E8B1000D308BD /* LocationAlert.png in Resources */ = {isa = PBXBuildFile; fileRef = F36281DA204E8B1000D308BD /* LocationAlert.png */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F33617DA205FCA88009FC36E /* NotificationAttachmentId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAttachmentId.swift; sourceTree = "<group>"; };
 		F36281D8204E8B1000D308BD /* DateAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DateAlert.png; sourceTree = "<group>"; };
 		F36281D9204E8B1000D308BD /* TimeAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TimeAlert.png; sourceTree = "<group>"; };
 		F36281DA204E8B1000D308BD /* LocationAlert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocationAlert.png; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		F3DAC165204DAA2000394FD0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F33617DA205FCA88009FC36E /* NotificationAttachmentId.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				F3DAC167204DAB6600394FD0 /* ShadowView.swift in Sources */,
 				F36281E3204EA2B900D308BD /* CoreLocService.swift in Sources */,
+				F33617DB205FCA88009FC36E /* NotificationAttachmentId.swift in Sources */,
 				F3DAC153204DA9EA00394FD0 /* ViewController.swift in Sources */,
 				F36281DF204E8DE200D308BD /* UserNotiService.swift in Sources */,
 				F3DAC151204DA9EA00394FD0 /* AppDelegate.swift in Sources */,
@@ -343,10 +347,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4246PMBZVS;
+				DEVELOPMENT_TEAM = SBG6ABHS2X;
 				INFOPLIST_FILE = Local_noti/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.landtanin.Local-noti";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.landtanin.Local-noti-FR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -358,10 +362,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4246PMBZVS;
+				DEVELOPMENT_TEAM = SBG6ABHS2X;
 				INFOPLIST_FILE = Local_noti/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.landtanin.Local-noti";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.landtanin.Local-noti-FR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
